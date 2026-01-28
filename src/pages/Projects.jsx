@@ -91,10 +91,18 @@ export default function Projects() {
                 </div>
 
                 <div className="project-actions">
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Safin-Sulthan/safin-portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaGithub /> Code
                   </a>
-                  <a href="#" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://safin-sulthan.github.io/safin-portfolio/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaExternalLinkAlt /> Live
                   </a>
                 </div>

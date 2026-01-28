@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function SkillCard({
-  icon,
+  icon: Icon,
   name,
   level,
   dots,
@@ -18,7 +18,7 @@ export default function SkillCard({
       onClick={() => setExpanded(!expanded)}
     >
       <div className="skill-header">
-        <div className="skill-icon">{icon}</div>
+        <div className="skill-icon">{Icon && <Icon />}</div>
         <h4 className="skill-name">{name}</h4>
       </div>
 
@@ -26,10 +26,7 @@ export default function SkillCard({
         <span className="confidence-label">{level}</span>
         <div className="confidence-dots">
           {[1, 2, 3, 4, 5].map((i) => (
-            <span
-              key={i}
-              className={`dot ${i <= dots ? 'active' : ''}`}
-            />
+            <span key={i} className={`dot ${i <= dots ? 'active' : ''}`} />
           ))}
         </div>
       </div>
