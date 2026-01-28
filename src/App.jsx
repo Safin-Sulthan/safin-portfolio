@@ -1,24 +1,29 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+
 import Home from './components/Home';
-import ScrollToTop from './components/ScrolltoTop';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Education from './pages/Education';
+import Skills from './pages/Skills';
 import LearningJourney from './pages/LearningJourney';
 import Projects from './pages/Projects';
-import Skills from './pages/Skills';
+import Contact from './pages/Contact';
+
+import ScrollToTop from './components/ScrolltoTop';
 
 export default function App() {
   const location = useLocation();
 
   return (
     <>
+      {/* Scroll to top on every route change */}
       <ScrollToTop />
+
       <Navbar />
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -30,6 +35,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
+
       <Footer />
     </>
   );
