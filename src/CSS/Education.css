@@ -1,0 +1,191 @@
+.education-section {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: visible;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 30px;
+
+  font-family: 'Inter', sans-serif;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
+}
+
+.education-section:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(220, 53, 69, 0.25);
+}
+
+.light .education-section {
+  background: rgba(245, 247, 250, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.light .education-section:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(220, 53, 69, 0.25);
+}
+
+.education-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.education-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin-bottom: 24px;
+}
+
+.light .education-divider {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.education-timeline {
+  position: relative;
+  padding: 20px 0 10px 0;
+}
+
+.education-vertical-line {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.light .education-vertical-line {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.education-item {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  padding-left: 40px;
+  margin-bottom: 52px;
+}
+
+.education-dot {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background: #dc3545;
+  border-radius: 50%;
+}
+
+.education-content {
+  max-width: 720px;
+}
+
+.education-degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.light .education-degree {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.education-institute {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.light .education-institute {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.education-range {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.light .education-range {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.range-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.light .range-bar {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.range-fill {
+  height: 100%;
+  width: 0;
+  background: rgba(220, 53, 69, 0.85);
+  border-radius: 8px;
+  transition: width 0.8s ease;
+}
+
+.education-exact {
+  font-size: 0.95rem;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.light .education-exact {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.education-year {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.light .education-year {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .education-item {
+    gap: 24px;
+    padding-left: 32px;
+  }
+
+  .range-bar {
+    width: 100%;
+  }
+}

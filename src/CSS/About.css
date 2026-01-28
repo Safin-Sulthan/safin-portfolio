@@ -1,0 +1,119 @@
+.about-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-text-start,
+.about-text-animate {
+  font-family: 'Inter', sans-serif;
+}
+
+.about-section {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 30px 30px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(220, 53, 69, 0.25);
+}
+
+.about-heading {
+  color: #dc3545;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.6s ease-out;
+}
+
+.about-heading.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-divider {
+  width: 100%;
+  max-width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  margin-bottom: 20px;
+}
+
+.light .about-divider {
+  background: rgba(0, 0, 0, 0.15);
+  height: 1px;
+}
+
+.about-image-start {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-out;
+}
+
+.about-image-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-text-start {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease-out;
+
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-text-animate {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+  max-width: 90%;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.highlight {
+  color: #dc3545; 
+  font-weight: 500;
+}
+.highlight {
+  text-shadow: 0 0 6px rgba(220, 53, 69, 0.25);
+}
+
+.light .about-section {
+  background: rgba(245, 247, 250, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.light .about-section:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(220, 53, 69, 0.25);
+}
