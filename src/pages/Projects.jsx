@@ -1,18 +1,34 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import '../CSS/Project.css';
 import PageWrapper from '../components/PageWrapper';
+import { useEffect } from 'react';
 export default function Projects() {
+  useEffect(() => {
+    // Page title
+    document.title = 'Projects | Safin Sulthan';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Frontend projects by Safin Sulthan including React applications, Redux Toolkit projects, and modern UI-focused web applications.';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
+
   return (
     <>
-      <title>Projects | Safin Sulthan</title>
-
-      <meta
-        name="description"
-        content="Frontend projects built by Safin Sulthan including a React-based Mini ATM project and a personal portfolio showcasing modern UI and state management."
-      />
-
-      <meta name="robots" content="index, follow" />
-
       <PageWrapper>
         <section className="projects-section pt-5 mt-5 ">
           <div className="projects-container">

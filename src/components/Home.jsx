@@ -9,6 +9,38 @@ import PageWrapper from '../components/PageWrapper';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  useEffect(() => {
+    // Title
+    document.title = 'Safin Sulthan | Frontend Developer';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Safin Sulthan is a frontend developer skilled in HTML, CSS, JavaScript, React, and modern UI development. Fresher open to learning-oriented frontend opportunities.';
+
+    // Author
+    let metaAuthor = document.querySelector('meta[name="author"]');
+    if (!metaAuthor) {
+      metaAuthor = document.createElement('meta');
+      metaAuthor.name = 'author';
+      document.head.appendChild(metaAuthor);
+    }
+    metaAuthor.content = 'Safin Sulthan';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
   const navigate = useNavigate();
 
   const isGlobalDeleting = useRef(false);
@@ -78,16 +110,6 @@ export default function Home() {
 
   return (
     <>
-      {/* ===== SEO ===== */}
-      <title>Safin Sulthan | Frontend Developer</title>
-
-      <meta
-        name="description"
-        content="Safin Sulthan is a frontend developer skilled in HTML, CSS, JavaScript, React, and modern UI development. Fresher open to learning-oriented frontend opportunities."
-      />
-
-      <meta name="author" content="Safin Sulthan" />
-      <meta name="robots" content="index, follow" />
       <PageWrapper>
         <main>
           <section className="pt-5 mt-3">

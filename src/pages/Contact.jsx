@@ -1,18 +1,35 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
+import { useEffect } from 'react';
 import '../CSS/Contact.css';
 import Narasapuram_Safin_Sulthan_Frontend_Developer_Resume from '../assets/Narasapuram_Safin_Sulthan_Frontend_Developer_Resume.pdf';
 import PageWrapper from '../components/PageWrapper';
 export default function Contact() {
+  useEffect(() => {
+    // Page title
+    document.title = 'Contact | Safin Sulthan';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Contact Safin Sulthan, a frontend developer open to learning-oriented opportunities, collaborations, and frontend roles. Reach out via email, GitHub, or LinkedIn.';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
+
   return (
     <>
-      <title>Contact | Safin Sulthan</title>
-
-      <meta
-        name="description"
-        content="Safin Sulthan is a frontend developer fresher open to learning-oriented opportunities, collaborations, and frontend roles. Reach out through available platforms."
-      />
-
-      <meta name="robots" content="index, follow" />
       <PageWrapper>
         <section className="contact-section mt-5 pt-5" id="contact">
           <div className="contact-container">

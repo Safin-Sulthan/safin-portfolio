@@ -1,20 +1,35 @@
+import { useEffect } from 'react';
 import { FaGraduationCap, FaCode, FaReact, FaRocket } from 'react-icons/fa';
 import PageWrapper from '../components/PageWrapper';
 import '../CSS/LearningJourney.css';
 
 export default function LearningJourney() {
+  useEffect(() => {
+    // Page title
+    document.title = 'Learning Journey | Safin Sulthan';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Explore the learning journey of Safin Sulthan, from HTML and CSS to advanced React development, UI design, and modern frontend practices.';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
+
   return (
     <>
-      {/*  SEO */}
-      <title>Learning Journey | Safin Sulthan</title>
-
-      <meta
-        name="description"
-        content="Explore the learning journey of Safin Sulthan, a frontend developer who learned HTML, CSS, JavaScript, and React through self-study, consistent practice, and real-world projects."
-      />
-
-      <meta name="author" content="Safin Sulthan" />
-      <meta name="robots" content="index, follow" />
       <PageWrapper>
         <section className="journey-section mt-5 pt-5 ">
           <div className="journey-container">

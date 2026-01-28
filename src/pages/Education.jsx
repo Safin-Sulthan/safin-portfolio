@@ -3,6 +3,30 @@ import '../CSS/Education.css';
 import PageWrapper from '../components/PageWrapper';
 
 export default function Education() {
+  useEffect(() => {
+    // Page title
+    document.title = 'Education | Safin Sulthan';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Educational background of Safin Sulthan, including M.Sc in Artificial Intelligence & Data Science and undergraduate studies with strong academic performance.';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
+
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -26,14 +50,6 @@ export default function Education() {
 
   return (
     <>
-      <title>Education | Safin Sulthan</title>
-
-      <meta
-        name="description"
-        content="Educational background of Safin Sulthan including M.Sc in Artificial Intelligence & Data Science and undergraduate studies with strong academic performance."
-      />
-
-      <meta name="robots" content="index, follow" />
       <PageWrapper>
         <section ref={sectionRef} className="education-section my-5">
           <div className="container px-0">

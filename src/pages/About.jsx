@@ -3,6 +3,30 @@ import aboutimage from '../assets/aboutimage.png';
 import '../CSS/About.css';
 import PageWrapper from '../components/PageWrapper';
 export default function About() {
+  useEffect(() => {
+    // Page title
+    document.title = 'About | Safin Sulthan';
+
+    // Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Learn more about Safin Sulthan, a frontend developer fresher passionate about building modern, responsive user interfaces using React and JavaScript.';
+
+    // Robots
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = 'index, follow';
+  }, []);
+
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -28,15 +52,6 @@ export default function About() {
 
   return (
     <>
-      {/* ===== SEO ===== */}
-      <title>About | Safin Sulthan</title>
-
-      <meta
-        name="description"
-        content="Learn more about Safin Sulthan, a frontend developer fresher passionate about building modern, responsive user interfaces using React and JavaScript."
-      />
-
-      <meta name="robots" content="index, follow" />
       <PageWrapper>
         <section className="about-section my-5" ref={sectionRef}>
           <div className="container px-0">
