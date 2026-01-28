@@ -291,3 +291,55 @@
     transform: translateY(0);
   }
 }
+
+/* Dark mode already OK — keep active dots */
+.dot {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Light mode — make INACTIVE dots visible */
+.light .dot {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.light .dot.active {
+  background: #dc3545;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .skill-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 18px;
+  }
+
+  .skill-name {
+    font-size: 1.05rem;
+  }
+
+  .confidence-label {
+    font-size: 0.85rem;
+  }
+
+  .skills-info {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .skill-card {
+    padding: 16px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+}

@@ -161,3 +161,50 @@
     margin-bottom: 10px;
   }
 }
+
+/* Tablets */
+@media (max-width: 992px) {
+  .timeline-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 24px;
+  }
+
+  .timeline-line {
+    left: 22px;
+  }
+
+  .timeline-card {
+    padding: 18px;
+  }
+
+  .timeline-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-line {
+    left: 18px;
+  }
+
+  .timeline-icon {
+    min-width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}

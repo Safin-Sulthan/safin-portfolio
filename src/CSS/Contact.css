@@ -117,3 +117,40 @@
     border-radius: 18px;
   }
 }
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact-grid {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 18px;
+  }
+
+  .contact-card svg {
+    font-size: 1.6rem;
+  }
+
+  .contact-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 16px;
+  }
+
+  .contact-card h4 {
+    font-size: 1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+}

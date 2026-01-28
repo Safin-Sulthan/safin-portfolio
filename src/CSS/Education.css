@@ -189,3 +189,46 @@
     width: 100%;
   }
 }
+
+/* Tablets */
+@media (max-width: 992px) {
+  .education-content {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .education-item {
+    gap: 20px;
+    padding-left: 28px;
+  }
+
+  .education-vertical-line {
+    left: 10px;
+  }
+
+  .education-dot {
+    left: 4px;
+  }
+
+  .education-degree {
+    font-size: 1.05rem;
+  }
+
+  .education-institute {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .education-degree {
+    font-size: 1rem;
+  }
+
+  .education-range,
+  .education-exact {
+    font-size: 0.9rem;
+  }
+}

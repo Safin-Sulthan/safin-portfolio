@@ -178,3 +178,37 @@
     font-size: 1.5rem;
   }
 }
+
+/* Tablets */
+@media (max-width: 992px) {
+  .projects-grid {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-desc {
+    font-size: 0.9rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-actions a {
+    justify-content: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .project-card {
+    padding: 16px;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+}
