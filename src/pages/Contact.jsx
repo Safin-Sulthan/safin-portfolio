@@ -80,20 +80,70 @@ export default function Contact() {
                 <p>Let’s connect professionally</p>
               </a>
 
-              <a
-                href={Narasapuram_Safin_Sulthan_Frontend_Developer_Resume}
-                target="_blank"
-                rel="noreferrer"
+              <div
                 className="contact-card"
+                role="button"
                 aria-label="Resume"
+                data-bs-toggle="modal"
+                data-bs-target="#resumeModal"
               >
                 <FaFilePdf />
                 <h4>Resume</h4>
                 <p>View or download my resume</p>
-              </a>
+              </div>
             </div>
           </div>
         </section>
+        <div
+          className="modal fade"
+          id="resumeModal"
+          tabIndex="-1"
+          aria-labelledby="resumeModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div className="modal-content bg-dark text-light">
+              <div className="modal-header border-secondary">
+                <h5 className="modal-title" id="resumeModalLabel">
+                  My Resume
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div className="modal-body p-0">
+                <iframe
+                  src="/safin-portfolio/Narasapuram_Safin_Sulthan_Frontend_Developer_Resume.pdf"
+                  title="Resume Preview"
+                  width="100%"
+                  height="600px"
+                  style={{ border: 'none' }}
+                />
+              </div>
+
+              <div className="modal-footer border-secondary">
+                <a
+                  href="/safin-portfolio/Narasapuram_Safin_Sulthan_Frontend_Developer_Resume.pdf"
+                  download
+                  className="btn btn-outline-light"
+                >
+                  Download Resume
+                </a>
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </PageWrapper>
     </>
   );

@@ -154,3 +154,7 @@
     font-size: 0.85rem;
   }
 }
+
+.contact-card[role='button'] {
+  cursor: pointer;
+}
