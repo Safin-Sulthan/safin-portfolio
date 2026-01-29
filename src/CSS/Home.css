@@ -154,3 +154,63 @@
     transition: none;
   }
 }
+
+
+.profile-image-block {
+  display: flex;
+  justify-content: center; /* true horizontal centering */
+  margin-top: -8px; /* move image UP slightly */
+  margin-bottom: 18px; /* GAP between image and badge */
+}
+
+.profile-frame {
+  box-sizing: border-box;
+  width: 260px;
+  height: 320px;
+  padding: 2px; /* thin frame */
+  border-radius: 18px;
+  background: rgba(220, 53, 69, 0.55); /* light danger red */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* optical centering */
+}
+
+.profile-img {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  object-fit: cover;
+  border-radius: 14px;
+  background: #111;
+}
+
+
+
+body:not(.dark-mode) .profile-frame {
+  background: rgba(220, 53, 69, 0.4);
+}
+
+
+
+@media (max-width: 768px) {
+  .profile-frame {
+    width: 220px;
+    height: 270px;
+  }
+
+  .profile-image-block {
+    margin-top: -6px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-frame {
+    width: 200px;
+    height: 240px;
+  }
+
+  .profile-image-block {
+    margin-top: -4px;
+    margin-bottom: 14px;
+  }
+}

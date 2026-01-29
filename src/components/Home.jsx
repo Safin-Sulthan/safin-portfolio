@@ -1,5 +1,5 @@
 import '../CSS/Home.css';
-import ProfileImage from '../assets/ProfileImage.png';
+import profilePicture from '../assets/profilePicture.png';
 import { useState, useEffect, useRef } from 'react';
 import Narasapuram_Safin_Sulthan_Frontend_Developer_Resume from '../assets/Narasapuram_Safin_Sulthan_Frontend_Developer_Resume.pdf';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -174,12 +174,15 @@ export default function Home() {
                 </div>
                 <div className="col-md-4 order-1 order-md-2 d-flex justify-content-center mb-4 mb-md-0">
                   <div className="glass-card text-center">
-                    <img
-                      src={ProfileImage}
-                      alt="Profile"
-                      className="img-fluid"
-                      style={{ maxWidth: '280px' }}
-                    />
+                    <div className="profile-image-block">
+                      <div className="profile-frame">
+                        <img
+                          src={profilePicture}
+                          alt="Safin Sulthan"
+                          className="profile-img"
+                        />
+                      </div>
+                    </div>
 
                     <div className="availability-badge">
                       <span className="status-dot"></span>
